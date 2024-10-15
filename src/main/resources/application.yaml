@@ -1,0 +1,16 @@
+# Gateway Configuration:
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  cloud:
+    gateway:
+      # Gateway Routes:
+      routes:
+        #- id: Auth-[auth,logIn,register,password]
+        #  uri: asd
+        #  predicates:
+        #    - Path=/v1/auth/**
+            
+
+

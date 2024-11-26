@@ -5,12 +5,7 @@ server:
 spring:
   cloud:
     gateway:
-      # Gateway Routes:
       routes:
-        #- id: Auth-[auth,logIn,register,password]
-        #  uri: asd
-        #  predicates:
-        #    - Path=/v1/auth/**
         - id: Twits
           uri: ${TWIT_MS_URI}
           predicates:
@@ -22,6 +17,8 @@ spring:
           uri: ${USER_MS_URI}
           predicates:
             - Path=/api/v1/admin/**
+          filters:
+            - AuthFilter
              
            
 

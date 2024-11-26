@@ -11,6 +11,18 @@ spring:
         #  uri: asd
         #  predicates:
         #    - Path=/v1/auth/**
+        - id: Twits
+          uri: ${TWIT_MS_URI}
+          predicates:
+            - Path=/v1/twit/admin/**
+          filters:
+            - AuthFilter
             
+        - id: Users
+          uri: ${USER_MS_URI}
+          predicates:
+            - Path=/api/v1/admin/**
+             
+           
 
 

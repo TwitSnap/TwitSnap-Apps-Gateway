@@ -19,6 +19,19 @@ spring:
             - Path=/api/v1/admin/**
           filters:
             - AuthFilter
+
+        - id: ServiceRegistry
+          uri: ${SERVICE_REGISTRY_MS_URI}
+          predicates:
+            - Path=/v1/registry/**
+          filters:
+            - AuthFilter
+
+
+
+
+
+
              
            
 
